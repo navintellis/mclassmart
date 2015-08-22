@@ -14,7 +14,8 @@ angular.module('starter.services', [])
     { id: 3, name: 'Ash Ketchum' },
       { id: 4, name: 'Navin Tellis' },
       { id: 5, name: 'Rohit Phutane' },
-      { id: 6, name: 'Chirag Kinni' }
+      { id: 6, name: 'Chirag Kinni' },
+      { id: 7, name: 'Soumya Shree' }
   ];
 
   return {
