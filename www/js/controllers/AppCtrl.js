@@ -44,6 +44,7 @@
 
       //Classmart code starts from here
       $scope.screenConfig = classmart.enums.screenConfig;
+      $scope.routeConfig = classmart.enums.routeConfig;
 
 });
 }(angular,classmart));

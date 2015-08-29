@@ -21,6 +21,12 @@ classmart.enums.apiConfig = {
 };
 
 classmart.enums.routeConfig={
+    'app':{
+        state:'app',
+        url: '/app',
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+    },
     'login':{
         state:'login',
         url: '/login',
@@ -31,36 +37,61 @@ classmart.enums.routeConfig={
         state:'app.home',
         url: '/home',
         templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
     },
     'app_timetable':{
         state:'app.timetable',
         url: '/timetable',
         templateUrl: 'templates/timetable.html',
+        controller: ''
     },
     'app_rr':{
         state:'app.rr',
         url: '/rr',
         templateUrl: 'templates/recommendedReading.html',
+        controller: ''
     },
     'app_mentor':{
         state:'app.mentor',
         url: '/mentor',
         templateUrl: 'templates/mentor.html',
+        controller: ''
     },
     'app_faculty':{
         state:'app.faculty',
         url: '/faculty',
         templateUrl: 'templates/faculty.html',
+        controller: ''
     },
     'app_quickref':{
         state:'app.quickref',
         url: '/quickref',
         templateUrl: 'templates/quickReference.html',
+        controller: ''
     },
     'app_account':{
         state:'app.account',
         url: '/account',
         templateUrl: 'templates/accountSetting.html',
+        controller: ''
+    },
+    'app_home_learnersKatta':{
+        state:'app.home.learnerskatta',
+        url: '/learnerskatta',
+        templateUrl: 'templates/learnersKatta.html',
+        controller: ''
+    },
+    'app_home_forum':{
+        state:'app.home.forum',
+        url: '/forum',
+        templateUrl: 'templates/forum.html',
+        controller: ''
+    },
+    'app_home_quiz':{
+        state:'app.home.quiz',
+        url: '/quiz',
+        templateUrl: 'templates/quiz.html',
+        controller: ''
     }
 
 

@@ -3,8 +3,9 @@
   angular.module(classmart.constants.moduleName).
   controller('LoginController', ['$scope', '$state',
     function($scope,$state) {
+        var routeConfig = classmart.enums.routeConfig;
         $scope.doLogin=function(){
-            $state.go('app.home');
+            $state.go(routeConfig.app_home.state);
         };
     }
   ]);

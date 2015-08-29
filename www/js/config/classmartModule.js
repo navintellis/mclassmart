@@ -1,3 +1,3 @@
 (function(angular){
-    angular.module(classmart.constants.moduleName, ['ionic']);
+    angular.module(classmart.constants.moduleName, ['Scope.safeApply','ionic']);
 }(angular));

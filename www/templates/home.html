@@ -1,5 +1,14 @@
 <ion-view view-title="Home">
   <ion-content>
-    <h1>Home</h1>
+    <div class="button-bar bar-positive">
+      <a class="button" ng-click="selectTab(tabConfig.learnerskatta.state)" ng-bind="tabConfig.learnerskatta.title"></a>
+      <a class="button" ng-click="selectTab(tabConfig.forum.state)" ng-bind="tabConfig.forum.title"></a>
+      <a class="button" ng-click="selectTab(tabConfig.quiz.state)" ng-bind="tabConfig.quiz.title"></a>
+    </div>
+    <!--<h1>Home</h1>-->
+
+    <ion-nav-view name="homecontent-tab"></ion-nav-view>
+
   </ion-content>
 </ion-view>
+
