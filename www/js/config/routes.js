@@ -94,6 +94,15 @@
         }
       })
 
+      .state(routeConfig.app_faculty.state, {
+        url: routeConfig.app_faculty.url,
+        views: {
+          'menuContent': {
+            templateUrl: routeConfig.app_faculty.templateUrl
+          }
+        }
+      })
+
       .state(routeConfig.app_quickref.state, {
         url: routeConfig.app_quickref.url,
         views: {
