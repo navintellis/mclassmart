@@ -4,7 +4,7 @@
   controller('LoginController', ['$scope', '$state',
     function($scope,$state) {
         $scope.doLogin=function(){
-            $state.go('app.search');
+            $state.go('app.home');
         };
     }
   ]);
