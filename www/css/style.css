@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center-text
+{
+    text-align: center;
+    display: block;
+}
+.menu{
+    width: 150px;
+}

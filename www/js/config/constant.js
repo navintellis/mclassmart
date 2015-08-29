@@ -1,0 +1,3 @@
+classmart.constants={
+moduleName: 'classmart'
+};
