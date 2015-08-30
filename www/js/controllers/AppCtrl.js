@@ -1,7 +1,7 @@
 (function(angular, classmart) {
   'use strict';
   angular.module(classmart.constants.moduleName)
-    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory) {
+    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory,$state) {
 
       // With the new view caching in Ionic, Controllers are only called
       // when they are recreated or on app start, instead of every page change.
@@ -47,7 +47,7 @@
         getLastItem: function() {
           /*if ($ionicHistory.viewHistory().backView)
             return $ionicHistory.viewHistory().backView.title;*/
-            return $ionicHistory.backTitle()
+            return $ionicHistory.backTitle();
         },
         isHistoryPresent: function() {
           return !(!$ionicHistory.backTitle());
@@ -58,6 +58,7 @@
       //Classmart code starts from here
       $scope.screenConfig = classmart.enums.screenConfig;
       $scope.routeConfig = classmart.enums.routeConfig;
+      $scope.$state= $state;
 
     });
 }(angular, classmart));
