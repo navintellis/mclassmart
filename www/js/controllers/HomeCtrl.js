@@ -31,7 +31,7 @@
         $state.go($scope.tabConfig.tabs[tabId].state);
       };
       $scope.isTabActive = function(tabId) {
-        return ($scope.tabConfig.activeTab === tabId);
+        return ($state.current.name === $scope.tabConfig.tabs[tabId].state);
       };
 
     }
