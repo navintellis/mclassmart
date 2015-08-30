@@ -31,7 +31,7 @@ classmart.enums.routeConfig={
         state:'login',
         url: '/login',
         templateUrl: 'templates/login.html',
-        controller: 'LoginController'
+        controller: 'LoginCtrl'
     },
     'app_home':{
         state:'app.home',

@@ -1,7 +1,7 @@
 (function(angular,classmart) {
   'use strict';
   angular.module(classmart.constants.moduleName).
-  controller('LoginController', ['$scope', '$state',
+  controller('LoginCtrl', ['$scope' , '$state',
     function($scope,$state) {
         var routeConfig = classmart.enums.routeConfig;
         $scope.doLogin=function(){
