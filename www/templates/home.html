@@ -7,9 +7,9 @@
     }
     </style>
     <div class="button-bar bar-positive">
-      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.learnerskatta.tabId)}" ng-click="selectTab(tabConfig.tabs.learnerskatta.tabId)" ng-bind="tabConfig.tabs.learnerskatta.title"></a>
-      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.forum.tabId)}" ng-click="selectTab(tabConfig.tabs.forum.tabId)" ng-bind="tabConfig.tabs.forum.title"></a>
-      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.quiz.tabId)}" ng-click="selectTab(tabConfig.tabs.quiz.tabId)" ng-bind="tabConfig.tabs.quiz.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.learnerskatta.tabId)}" on-tap="selectTab(tabConfig.tabs.learnerskatta.tabId)" ng-bind="tabConfig.tabs.learnerskatta.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.forum.tabId)}" on-tap="selectTab(tabConfig.tabs.forum.tabId)" ng-bind="tabConfig.tabs.forum.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.quiz.tabId)}" on-tap="selectTab(tabConfig.tabs.quiz.tabId)" ng-bind="tabConfig.tabs.quiz.title"></a>
     </div>
     <!--<h1>Home</h1>-->
 

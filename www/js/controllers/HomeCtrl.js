@@ -9,7 +9,7 @@
         tabs: {
           learnerskatta: {
             tabId: 'learnerskatta',
-            title: 'Learners Katta',
+            title: 'Katta',
             state: routeConfig.app_home_learnersKatta.state
           },
           forum: {
