@@ -6,22 +6,32 @@
 
       var routeConfig = classmart.enums.routeConfig;
       $scope.tabConfig = {
-        learnerskatta: {
-          title: 'Learners Katta',
-          state: routeConfig.app_home_learnersKatta.state
+        tabs: {
+          learnerskatta: {
+            tabId: 'learnerskatta',
+            title: 'Learners Katta',
+            state: routeConfig.app_home_learnersKatta.state
+          },
+          forum: {
+            tabId: 'forum',
+            title: 'Forum',
+            state: routeConfig.app_home_forum.state
+          },
+          quiz: {
+            tabId: 'quiz',
+            title: 'Quiz',
+            state: routeConfig.app_home_quiz.state
+          }
         },
-        forum: {
-          title: 'Forum',
-          state: routeConfig.app_home_forum.state
-        },
-        quiz: {
-          title: 'Quiz',
-          state: routeConfig.app_home_quiz.state
-        }
+        activeTab: 'learnerskatta'
       };
 
-      $scope.selectTab = function(state) {
-        $state.go(state);
+      $scope.selectTab = function(tabId) {
+        $scope.tabConfig.activeTab = tabId;
+        $state.go($scope.tabConfig.tabs[tabId].state);
+      };
+      $scope.isTabActive = function(tabId) {
+        return ($scope.tabConfig.activeTab === tabId);
       };
 
     }

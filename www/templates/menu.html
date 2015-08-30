@@ -1,13 +1,16 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-dark">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
+        <button ng-if="history.isHistoryPresent()" class="button button-clear" ng-click="history.myGoBack()">
+          <i class="ion-chevron-left"></i> {{history.getLastItem()}}
+        </button>
       </ion-nav-buttons>
+
+      <!--<ion-nav-back-button>
+      </ion-nav-back-button>-->
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>

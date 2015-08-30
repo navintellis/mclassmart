@@ -1,9 +1,15 @@
 <ion-view view-title="Home">
   <ion-content>
+   <style>
+    .active-home-tab{
+        border-color: #387ef5 !important;
+        background-color: #0c63ee !important;
+    }
+    </style>
     <div class="button-bar bar-positive">
-      <a class="button" ng-click="selectTab(tabConfig.learnerskatta.state)" ng-bind="tabConfig.learnerskatta.title"></a>
-      <a class="button" ng-click="selectTab(tabConfig.forum.state)" ng-bind="tabConfig.forum.title"></a>
-      <a class="button" ng-click="selectTab(tabConfig.quiz.state)" ng-bind="tabConfig.quiz.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.learnerskatta.tabId)}" ng-click="selectTab(tabConfig.tabs.learnerskatta.tabId)" ng-bind="tabConfig.tabs.learnerskatta.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.forum.tabId)}" ng-click="selectTab(tabConfig.tabs.forum.tabId)" ng-bind="tabConfig.tabs.forum.title"></a>
+      <a class="button" ng-class="{'active-home-tab':isTabActive(tabConfig.tabs.quiz.tabId)}" ng-click="selectTab(tabConfig.tabs.quiz.tabId)" ng-bind="tabConfig.tabs.quiz.title"></a>
     </div>
     <!--<h1>Home</h1>-->
 
