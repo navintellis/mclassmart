@@ -1,14 +1,13 @@
 (function(angular, classmart) {
   'use strict';
-  angular.module(classmart.constants.moduleName).directive('quickLinks', ['$state', '$compile',
-    function($state, $compile) {
+  angular.module(classmart.constants.moduleName).directive('quickLinks', ['$state',
+    function($state) {
       return {
         templateUrl: 'js/directives/quickLinks/template/quickLinksTemplate.html',
         restrict: 'E',
         replace: true,
         scope: {
-          links: '='/*,
-            xyz: '&'*/
+          links: '='
         },
         link: function postLink($scope, elem, attrs) {
           $scope.onQuickLinkTap = function(link) {
@@ -18,7 +17,7 @@
                 $state.go(link.clickConfig.data);
                 break;
               default:
-                    console.log(link.clickConfig.data);
+                    console.log('notificationQuickLinkDirective: default Handling - '+link.clickConfig.data);
                 break;
             }
           };

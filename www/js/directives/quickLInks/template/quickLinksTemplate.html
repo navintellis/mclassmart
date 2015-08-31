@@ -1,7 +1,6 @@
 <div ng-repeat="link in links track by $index">
   <button class="row button button-icon button-clear" ng-if="link.notificationCount>0" ng-click="$parent.$parent.onQuickLinkTap(link)">
     <img width="30" height="30" ng-src="{{link.img}}" >
-    <span class="badge badge-assertive">{{::link.notificationCount}}{{xyz}}</span>
+    <span class="badge badge-assertive">{{::link.notificationCount}}</span>
   </button>
 </div>
-
