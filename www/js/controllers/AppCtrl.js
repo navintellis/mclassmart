@@ -1,7 +1,7 @@
 (function(angular, classmart) {
   'use strict';
   angular.module(classmart.constants.moduleName)
-    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory,$state) {
+    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory, $state) {
 
       // With the new view caching in Ionic, Controllers are only called
       // when they are recreated or on app start, instead of every page change.
@@ -47,7 +47,7 @@
         getLastItem: function() {
           /*if ($ionicHistory.viewHistory().backView)
             return $ionicHistory.viewHistory().backView.title;*/
-            return $ionicHistory.backTitle();
+          return $ionicHistory.backTitle();
         },
         isHistoryPresent: function() {
           return !(!$ionicHistory.backTitle());
@@ -58,7 +58,30 @@
       //Classmart code starts from here
       $scope.screenConfig = classmart.enums.screenConfig;
       $scope.routeConfig = classmart.enums.routeConfig;
-      $scope.$state= $state;
+      $scope.console = console;
+      $scope.$state = $state;
+
+      $scope.notificationsQuickLinks = [{
+        title: $scope.screenConfig.mentor.title,
+        img: $scope.screenConfig.mentor.img,
+        notificationCount: 3,
+        clickConfig: {
+          type: 'url',
+          data: $scope.screenConfig.mentor.state
+        }
+      }, {
+        title: $scope.screenConfig.timetable.title,
+        img: $scope.screenConfig.timetable.img,
+        notificationCount: 5,
+        clickConfig: {
+          type: 'url',
+          data: $scope.screenConfig.timetable.state
+        }
+      }];
+      $scope.xyz = function(link) {
+        console.log(link);
+        alert('reached parent controller');
+      };
 
     });
 }(angular, classmart));

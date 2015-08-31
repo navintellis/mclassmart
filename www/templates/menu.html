@@ -13,12 +13,13 @@
 
       <ion-nav-buttons side="right">
         <!--TODO: replace the button set with directive-->
-        <div>
+        <!--<div>
           <button class="row button button-icon button-clear" side="secondary" on-tap="$state.go('app.mentor');">
             <img width="30" height="30" src="img/sidemenu_icons/mentor_connect.png" alt="">
             <span class="badge badge-assertive">3</span>
           </button>
-        </div>
+        </div>-->
+       <quick-links links="notificationsQuickLinks"></quick-links>
       </ion-nav-buttons>
 
     </ion-nav-bar>
@@ -36,6 +37,7 @@
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="timetable"></sidemenu-tile>
+          <span class="badge badge-assertive">5</span>
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="rr"></sidemenu-tile>
