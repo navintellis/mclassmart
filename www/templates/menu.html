@@ -37,14 +37,14 @@
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="timetable"></sidemenu-tile>
-          <span class="badge badge-assertive">5</span>
+          <span class="badge badge-assertive" ng-if="getScreenNotifCount('timetable')" ng-bind="getScreenNotifCount('timetable');"></span>
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="rr"></sidemenu-tile>
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="mentor"></sidemenu-tile>
-          <span class="badge badge-assertive">3</span>
+          <span class="badge badge-assertive" ng-if="getScreenNotifCount('mentor')" ng-bind="getScreenNotifCount('mentor');"></span>
         </ion-item>
         <ion-item menu-close ng-href="">
           <sidemenu-tile tile-name="faculty"></sidemenu-tile>
