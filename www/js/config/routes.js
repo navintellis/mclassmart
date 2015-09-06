@@ -135,7 +135,8 @@
         url: routeConfig.app_home_learnersKatta.url,
         views: {
           'homecontent-tab': {
-            templateUrl: routeConfig.app_home_learnersKatta.templateUrl
+            templateUrl: routeConfig.app_home_learnersKatta.templateUrl,
+            controller: routeConfig.app_home_learnersKatta.controller
           }
         }
       })
@@ -154,6 +155,36 @@
         views: {
           'homecontent-tab': {
             templateUrl: routeConfig.app_home_quiz.templateUrl
+          }
+        }
+      })
+
+      .state(routeConfig.app_kattasubject.state, {
+        url: routeConfig.app_kattasubject.url,
+        views: {
+          'menuContent': {
+            templateUrl: routeConfig.app_kattasubject.templateUrl,
+            controller: routeConfig.app_kattasubject.controller
+          }
+        }
+      })
+
+      .state(routeConfig.app_kattachapter.state, {
+        url: routeConfig.app_kattachapter.url,
+        views: {
+          'menuContent': {
+            templateUrl: routeConfig.app_kattachapter.templateUrl,
+            controller: routeConfig.app_kattachapter.controller
+          }
+        }
+      })
+
+      .state(routeConfig.app_kattatopic.state, {
+        url: routeConfig.app_kattatopic.url,
+        views: {
+          'menuContent': {
+            templateUrl: routeConfig.app_kattatopic.templateUrl,
+            controller: routeConfig.app_kattatopic.controller
           }
         }
       });

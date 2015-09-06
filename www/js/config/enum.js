@@ -78,8 +78,8 @@ classmart.enums.routeConfig={
     'app_home_learnersKatta':{
         state:'app.home.learnerskatta',
         url: '/learnerskatta',
-        templateUrl: 'templates/learnersKatta.html',
-        controller: ''
+        templateUrl: 'templates/learnersKatta/learnersKatta.html',
+        controller: 'LearnersKattaCtrl'
     },
     'app_home_forum':{
         state:'app.home.forum',
@@ -92,6 +92,24 @@ classmart.enums.routeConfig={
         url: '/quiz',
         templateUrl: 'templates/quiz.html',
         controller: ''
+    },
+    'app_kattasubject':{
+        state:'app.kattasubject',
+        url: '/kattasubject/:id',
+        templateUrl: 'templates/learnersKatta/kattasubject.html',
+        controller: 'LearnersKattaCtrl'
+    },
+    'app_kattachapter':{
+        state:'app.kattachapter',
+        url: '/kattachapter/:id',
+        templateUrl: 'templates/learnersKatta/kattachapter.html',
+        controller: 'LearnersKattaCtrl'
+    },
+    'app_kattatopic':{
+        state:'app.kattatopic',
+        url: '/kattatopic/:id',
+        templateUrl: 'templates/learnersKatta/kattatopic.html',
+        controller: 'LearnersKattaCtrl'
     }
 
 

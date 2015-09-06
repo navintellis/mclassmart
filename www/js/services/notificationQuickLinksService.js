@@ -25,7 +25,7 @@
           }]
         },
         getNotificationCountByTitle = function(screenId) {
-          var notificationData = _.findWhere(notificationQuickLinks.data, {
+          var notificationData = _.find(notificationQuickLinks.data, {
             'screenId': screenId
           }),
             notificationCount = 0;
@@ -33,11 +33,15 @@
             notificationCount = notificationData.notificationCount;
           }
           return notificationCount;
-        };
+        },
+          getNotificationQuickLinksData= function(){
+              return notificationQuickLinks.data;
+          };
 
       return {
         notificationsQuickLinks: notificationQuickLinks,
-        getNotificationCountByTitle: getNotificationCountByTitle
+        getNotificationCountByTitle: getNotificationCountByTitle,
+        getNotificationQuickLinksData: getNotificationQuickLinksData
       };
     });
 }(angular, classmart, _));

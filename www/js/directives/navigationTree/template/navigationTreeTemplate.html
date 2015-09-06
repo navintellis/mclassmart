@@ -1,0 +1,7 @@
+<ion-list>
+  <ion-item class="item-icon-right" ng-repeat="item in pageDataList" ui-sref="{{targetState}}({id:item.id})">
+    {{getIndexNo(item.indexNo)}}{{item.title}}
+    <i class="icon ion-chevron-right ion-accessory"></i>
+  </ion-item>
+</ion-list>
+
