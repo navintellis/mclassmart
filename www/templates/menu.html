@@ -19,7 +19,7 @@
             <span class="badge badge-assertive">3</span>
           </button>
         </div>-->
-       <quick-links links="notificationsQuickLinks"></quick-links>
+       <quick-links links="notificationQuickLinks"></quick-links>
       </ion-nav-buttons>
 
     </ion-nav-bar>
@@ -33,27 +33,27 @@
     <ion-content>
       <ion-list>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="home"></sidemenu-tile>
+          <sidemenu-tile tile-name="{{screenConfig.home.screenId}}"></sidemenu-tile>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="timetable"></sidemenu-tile>
-          <span class="badge badge-assertive" ng-if="getScreenNotifCount('timetable')" ng-bind="getScreenNotifCount('timetable');"></span>
+          <sidemenu-tile tile-name="{{screenConfig.timetable.screenId}}"></sidemenu-tile>
+          <span class="badge badge-assertive" ng-if="getScreenNotifCount(screenConfig.timetable.screenId)>0" ng-bind="getScreenNotifCount(screenConfig.timetable.screenId);"></span>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="rr"></sidemenu-tile>
+          <sidemenu-tile tile-name="{{screenConfig.rr.screenId}}"></sidemenu-tile>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="mentor"></sidemenu-tile>
-          <span class="badge badge-assertive" ng-if="getScreenNotifCount('mentor')" ng-bind="getScreenNotifCount('mentor');"></span>
+          <sidemenu-tile tile-name="{{screenConfig.mentor.screenId}}"></sidemenu-tile>
+          <span class="badge badge-assertive" ng-if="getScreenNotifCount(screenConfig.mentor.screenId)>0" ng-bind="getScreenNotifCount(screenConfig.mentor.screenId);"></span>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="faculty"></sidemenu-tile>
+          <sidemenu-tile tile-name="{{screenConfig.faculty.screenId}}"></sidemenu-tile>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="quickref"></sidemenu-tile>
+          <sidemenu-tile tile-name="{{screenConfig.quickref.screenId}}"></sidemenu-tile>
         </ion-item>
         <ion-item menu-close ng-href="">
-          <sidemenu-tile tile-name="account"></sidemenu-tile>
+          <sidemenu-tile tile-name="{{screenConfig.account.screenId}}"></sidemenu-tile>
         </ion-item>
         <!--TODO: clean the below dummy links-->
         <ion-item menu-close ng-click="login()">

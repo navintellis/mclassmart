@@ -3,7 +3,8 @@
   angular.module(classmart.constants.moduleName)
     .config(function($stateProvider, $urlRouterProvider) {
 
-      var routeConfig = classmart.enums.routeConfig;
+      var routeConfig = classmart.enums.routeConfig,
+        screenConfig = classmart.enums.screenConfig;
 
       // if none of the above states are matched, use this as the fallback
       $urlRouterProvider.otherwise('/login');
@@ -181,6 +182,18 @@
 
       .state(routeConfig.app_kattatopic.state, {
         url: routeConfig.app_kattatopic.url,
+        resolve: {
+          quickLinkRef: function(NotificationQuickLinksService) {
+            return NotificationQuickLinksService.getNotificationDataByScreenId(screenConfig.quickref.screenId);
+          }
+        },
+        onEnter: function(quickLinkRef) {
+          quickLinkRef.notificationCount = classmart.enums.activityState.enabled_negBased;
+          quickLinkRef.img = quickLinkRef.clickConfig.data.unchecked;
+        },
+        onExit: function(quickLinkRef) {
+          quickLinkRef.notificationCount = classmart.enums.activityState.disabled_negBased;
+        },
         views: {
           'menuContent': {
             templateUrl: routeConfig.app_kattatopic.templateUrl,

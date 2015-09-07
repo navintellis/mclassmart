@@ -3,9 +3,9 @@
   angular.module(classmart.constants.moduleName)
     .factory('NotificationQuickLinksService', function() {
       var screenConfig = classmart.enums.screenConfig,
-        notificationQuickLinks = {
-          data: [{
-            screenId: 'mentor',
+        data = {
+          notificationQuickLinks: [{
+            screenId: screenConfig.mentor.screenId,
             title: screenConfig.mentor.title,
             img: screenConfig.mentor.img,
             notificationCount: 3,
@@ -14,7 +14,7 @@
               data: screenConfig.mentor.state
             }
           }, {
-            screenId: 'timetable',
+            screenId: screenConfig.timetable.screenId,
             title: screenConfig.timetable.title,
             img: screenConfig.timetable.img,
             notificationCount: 5,
@@ -22,10 +22,23 @@
               type: 'url',
               data: screenConfig.timetable.state
             }
+          }, {
+            screenId: screenConfig.quickref.screenId,
+            title: screenConfig.quickref.title,
+            img: 'img/sidemenu_icons/quick_reference_white.png',
+            notificationCount: classmart.enums.activityState.disabled_negBased,
+            clickConfig: {
+              type: 'toggle',
+              data: {
+                checked: 'img/sidemenu_icons/quick_reference_golden.png',
+                unchecked: 'img/sidemenu_icons/quick_reference_white.png',
+                callback: null
+              }
+            }
           }]
         },
-        getNotificationCountByTitle = function(screenId) {
-          var notificationData = _.find(notificationQuickLinks.data, {
+        getNotificationCountByScreenId = function(screenId) {
+          var notificationData = _.find(data.notificationQuickLinks, {
             'screenId': screenId
           }),
             notificationCount = 0;
@@ -34,13 +47,20 @@
           }
           return notificationCount;
         },
+        getNotificationDataByScreenId = function(screenId) {
+          var notificationData = _.find(data.notificationQuickLinks, {
+            'screenId': screenId
+          });
+          return notificationData;
+        },
         getNotificationQuickLinksData = function() {
-          return notificationQuickLinks.data;
+          return data.notificationQuickLinks;
         };
 
       return {
-        notificationsQuickLinks: notificationQuickLinks,
-        getNotificationCountByTitle: getNotificationCountByTitle,
+        data: data,
+        getNotificationCountByScreenId: getNotificationCountByScreenId,
+        getNotificationDataByScreenId: getNotificationDataByScreenId,
         getNotificationQuickLinksData: getNotificationQuickLinksData
       };
     });

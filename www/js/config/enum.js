@@ -118,38 +118,50 @@ classmart.enums.routeConfig={
 
 classmart.enums.screenConfig={
     'home': {
+        screenId: 'home',
         title:'Home',
         state: classmart.enums.routeConfig.app_home.state,
         img: 'img/sidemenu_icons/home.png'
     },
     'timetable': {
+        screenId: 'timetable',
         title:'Time Table',
         state: classmart.enums.routeConfig.app_timetable.state,
         img: 'img/sidemenu_icons/timetable.png'
     },
     'rr': {
+        screenId: 'rr',
         title:'Recom Reading',
         state: classmart.enums.routeConfig.app_rr.state,
         img: 'img/sidemenu_icons/recommended_reading.png'
     },
     'mentor': {
+        screenId: 'mentor',
         title:'Mentor Connect',
         state: classmart.enums.routeConfig.app_mentor.state,
         img: 'img/sidemenu_icons/mentor_connect.png'
     },
     'faculty': {
+        screenId: 'faculty',
         title:'Faculty Contact',
         state: classmart.enums.routeConfig.app_faculty.state,
         img: 'img/sidemenu_icons/faculty_contact.png'
     },
     'quickref': {
+        screenId: 'quickref',
         title:'Quick Ref',
         state: classmart.enums.routeConfig.app_quickref.state,
         img: 'img/sidemenu_icons/quick_reference.png'
     },
     'account': {
+        screenId: 'account',
         title:'Account',
         state: classmart.enums.routeConfig.app_account.state,
         img: 'img/sidemenu_icons/account_settings.png'
     }
+};
+
+classmart.enums.activityState = {
+    'enabled_negBased': 0,
+    'disabled_negBased':-1
 };

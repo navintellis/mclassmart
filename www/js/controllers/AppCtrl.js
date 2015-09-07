@@ -64,9 +64,9 @@
 
 
         $scope.getScreenNotifCount= function(screenId){
-            return NotificationQuickLinksService.getNotificationCountByTitle(screenId);
+            return NotificationQuickLinksService.getNotificationCountByScreenId(screenId);
         };
-        $scope.notificationsQuickLinks = NotificationQuickLinksService.notificationsQuickLinks.data;
+        $scope.notificationQuickLinks = NotificationQuickLinksService.data.notificationQuickLinks;
 
       }
     ]);

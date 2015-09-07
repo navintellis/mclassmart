@@ -14,17 +14,24 @@
               $scope.pageData.pageContentData = $scope.studyContent.subjects;
             } else if (typeof currentStateParams.id != "undefined") {
 
-              if (currentState.name === $scope.routeConfig.app_kattasubject.state) {
-                $scope.pageData.pageTitle = StudyContentService.getSelectedItemDataById(StudyContentService.enums.subjects, currentStateParams.id).title;
-                $scope.pageData.pageContentData = StudyContentService.getDataById(StudyContentService.enums.chapters, currentStateParams.id);
-              } else if (currentState.name === $scope.routeConfig.app_kattachapter.state) {
-                $scope.pageData.pageTitle = StudyContentService.getSelectedItemDataById(StudyContentService.enums.chapters, currentStateParams.id).title;
-                $scope.pageData.pageContentData = StudyContentService.getDataById(StudyContentService.enums.topics, currentStateParams.id);
-              } else if (currentState.name === $scope.routeConfig.app_kattatopic.state) {
-                var selectedItem = StudyContentService.getSelectedItemDataById(StudyContentService.enums.topics, currentStateParams.id);
+              switch (currentState.name) {
+                case $scope.routeConfig.app_kattasubject.state:
+                  $scope.pageData.pageTitle = StudyContentService.getSelectedItemDataById(StudyContentService.enums.subjects, currentStateParams.id).title;
+                  $scope.pageData.pageContentData = StudyContentService.getDataById(StudyContentService.enums.chapters, currentStateParams.id);
+                  break;
+                case $scope.routeConfig.app_kattachapter.state:
+                  $scope.pageData.pageTitle = StudyContentService.getSelectedItemDataById(StudyContentService.enums.chapters, currentStateParams.id).title;
+                  $scope.pageData.pageContentData = StudyContentService.getDataById(StudyContentService.enums.topics, currentStateParams.id);
+                  break;
+                case $scope.routeConfig.app_kattatopic.state:
+                  var selectedItem = StudyContentService.getSelectedItemDataById(StudyContentService.enums.topics, currentStateParams.id);
                   $scope.pageData.pageTitle = selectedItem.title;
-                $scope.pageData.pageContentData = selectedItem.content;
+                  $scope.pageData.pageContentData = selectedItem.content;
+                  break;
+                default:
+                  break;
               }
+
             }
           }, serviceSuccessCallback = function() {
             $scope.studyContent = StudyContentService.studyContentData.studyContent;
