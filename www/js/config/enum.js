@@ -110,6 +110,12 @@ classmart.enums.routeConfig={
         url: '/kattatopic/:id',
         templateUrl: 'templates/learnersKatta/kattatopic.html',
         controller: 'LearnersKattaCtrl'
+    },
+    'app_forumpost':{
+        state:'app.forumpost',
+        url: '/forumpost/:id',
+        templateUrl: 'templates/learnersKatta/forumpost.html',
+        controller: ''
     }
 
 

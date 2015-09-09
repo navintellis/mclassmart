@@ -200,6 +200,16 @@
             controller: routeConfig.app_kattatopic.controller
           }
         }
+      })
+
+      .state(routeConfig.app_forumpost.state, {
+        url: routeConfig.app_forumpost.url,
+        views: {
+          'menuContent': {
+            templateUrl: routeConfig.app_forumpost.templateUrl/*,
+            controller: routeConfig.app_forumpost.controller*/
+          }
+        }
       });
     })
     .run(['$rootScope', '$state', '$injector',
