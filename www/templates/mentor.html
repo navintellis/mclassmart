@@ -1,5 +1,26 @@
-<ion-view view-title="Mentor">
-  <ion-content>
-    <h1>Mentor</h1>
+<ion-view id="mentor-section" view-title="Mentor">
+
+  <ion-content class="content-stable" on-swipe-left="flags.showTime = true">
+    <!--on-swipe-right="flags.showTime = false"-->
+    <div ng-repeat="message in messages" ng-class="{other: message.userId != myId}" class="messages">
+      <div class="message" ng-class="{'slide-right': !flags.showTime, '': flags.showTime}">
+        <span>{{ message.text }}</span>
+      </div>
+      <div class="time" ng-class="{'slide-right': !flags.showTime, '': flags.showTime}">{{message.time}}</div>
+    </div>
   </ion-content>
+
+  <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+    <button class="button button-calm" ng-if="flags.showTime" on-tap="hideTime();">
+      Hide Time
+    </button>
+    <label class="item-input-wrapper">
+      <input chat-message-box type="text" placeholder="Type your query" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+    </label>
+    <button class="button button-clear" ng-click="sendMessage()">
+      Send
+    </button>
+  </ion-footer-bar>
+
 </ion-view>
+

@@ -82,7 +82,8 @@
         url: routeConfig.app_timetable.url,
         views: {
           'menuContent': {
-            templateUrl: routeConfig.app_timetable.templateUrl
+            templateUrl: routeConfig.app_timetable.templateUrl,
+            controller: routeConfig.app_timetable.controller
           }
         }
       })
@@ -100,7 +101,8 @@
         url: routeConfig.app_mentor.url,
         views: {
           'menuContent': {
-            templateUrl: routeConfig.app_mentor.templateUrl
+            templateUrl: routeConfig.app_mentor.templateUrl,
+            controller: routeConfig.app_mentor.controller
           }
         }
       })
@@ -206,7 +208,8 @@
         url: routeConfig.app_forumpost.url,
         views: {
           'menuContent': {
-            templateUrl: routeConfig.app_forumpost.templateUrl/*,
+            templateUrl: routeConfig.app_forumpost.templateUrl
+            /*,
             controller: routeConfig.app_forumpost.controller*/
           }
         }

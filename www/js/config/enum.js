@@ -43,7 +43,7 @@ classmart.enums.routeConfig={
         state:'app.timetable',
         url: '/timetable',
         templateUrl: 'templates/timetable.html',
-        controller: ''
+        controller: 'TimetableCtrl'
     },
     'app_rr':{
         state:'app.rr',
@@ -55,7 +55,7 @@ classmart.enums.routeConfig={
         state:'app.mentor',
         url: '/mentor',
         templateUrl: 'templates/mentor.html',
-        controller: ''
+        controller: 'MentorCtrl'
     },
     'app_faculty':{
         state:'app.faculty',
