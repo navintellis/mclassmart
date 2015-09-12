@@ -4,7 +4,8 @@
     .controller('MentorCtrl', ['$scope', '$timeout', '$ionicScrollDelegate',
       function($scope, $timeout, $ionicScrollDelegate) {
         $scope.flags = {
-          showTime: false
+          showTime: false,
+          hideTimeButton: false
         };
 
         var alternate,
@@ -47,14 +48,55 @@
           // cordova.plugins.Keyboard.close();
         };
 
+
+          $scope.showTime = function(){
+              $scope.flags.showTime = true;
+              $scope.flags.hideTimeButton = false;
+          };
+
         $scope.hideTime = function() {
-          $scope.flags.showTime = false;
+          $scope.flags.hideTimeButton = true;
+          $timeout(function() {
+            $scope.flags.showTime = false;
+          }, 1);
         };
 
 
         $scope.data = {};
         $scope.myId = '12345';
         $scope.messages = [];
+
+
+        $scope.composeSaveCallback = function(message) {
+          $scope.data.message = message;
+          $scope.sendMessage();
+        };
+
+
+        /* // Compose Message Modal Code
+
+          // Create the login modal that we will use later
+        $ionicModal.fromTemplateUrl('js/directives/composeMessage/template/composeMessageModal.html', {
+          scope: $scope
+        }).then(function(modal) {
+          $scope.composeMessageModal = modal;
+        });
+
+        // Triggered in the login modal to close it
+        $scope.closeComposeMessageModal = function() {
+          $scope.composeMessageModal.hide();
+        };
+
+        // Open the login modal
+        $scope.openComposeMessageModal = function() {
+          $scope.composeMessageModal.show();
+        };
+
+          $scope.sendFromComposeMessageModal= function(){
+               $scope.closeComposeMessageModal();
+              $scope.sendMessage();
+          };*/
+
       }
     ]);
 }(angular, classmart));

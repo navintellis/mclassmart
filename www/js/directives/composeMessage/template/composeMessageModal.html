@@ -1,0 +1,21 @@
+<ion-modal-view>
+  <ion-header-bar>
+   <div class="buttons">
+      <button class="button button-clear" ng-click="sendFromComposeMessageModal()">Send</button>
+    </div>
+    <h1 class="title">{{::title}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeComposeMessageModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="row">
+      <div class="col">
+        <label class="item item-input text">
+          <textarea placeholder="{{placeholder}}" rows="10" ng-model="message"></textarea>
+        </label>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

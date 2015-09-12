@@ -1,8 +1,8 @@
 <ion-view id="mentor-section" view-title="Mentor">
 
-  <ion-content class="content-stable" on-swipe-left="flags.showTime = true">
+  <ion-content class="content-stable" on-swipe-left="showTime()">
     <!--on-swipe-right="flags.showTime = false"-->
-    <div ng-repeat="message in messages" ng-class="{other: message.userId != myId}" class="messages">
+    <div ng-repeat="message in messages" ng-class="{'other': message.userId != myId}" class="messages">
       <div class="message" ng-class="{'slide-right': !flags.showTime, '': flags.showTime}">
         <span>{{ message.text }}</span>
       </div>
@@ -11,9 +11,10 @@
   </ion-content>
 
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-    <button class="button button-calm" ng-if="flags.showTime" on-tap="hideTime();">
+    <button class="button button-calm animated" ng-class="{'fadeOutLeft': flags.hideTimeButton, 'fadeInLeft': !flags.hideTimeButton}" ng-if="flags.showTime" on-tap="hideTime();">
       Hide Time
     </button>
+    <compose-message title="Message Mentor" placeholder="Please enter your query here..." message="data.message" on-save="composeSaveCallback"></compose-message>
     <label class="item-input-wrapper">
       <input chat-message-box type="text" placeholder="Type your query" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
     </label>

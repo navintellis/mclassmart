@@ -41,6 +41,16 @@
             $scope.closeLogin();
           }, 1000);
         };
+
+
+
+        //Classmart code starts from here
+        $scope.screenConfig = classmart.enums.screenConfig;
+        $scope.routeConfig = classmart.enums.routeConfig;
+        $scope.console = console;
+        $scope.$state = $state;
+
+
         $scope.history = {
           myGoBack: function() {
             $ionicHistory.goBack();
@@ -56,15 +66,8 @@
         };
 
 
-        //Classmart code starts from here
-        $scope.screenConfig = classmart.enums.screenConfig;
-        $scope.routeConfig = classmart.enums.routeConfig;
-        $scope.console = console;
-        $scope.$state = $state;
-
-
-        $scope.getScreenNotifCount= function(screenId){
-            return NotificationQuickLinksService.getNotificationCountByScreenId(screenId);
+        $scope.getScreenNotifCount = function(screenId) {
+          return NotificationQuickLinksService.getNotificationCountByScreenId(screenId);
         };
         $scope.notificationQuickLinks = NotificationQuickLinksService.data.notificationQuickLinks;
 
