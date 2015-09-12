@@ -14,6 +14,10 @@
 
           $scope.message = $scope.message || '';
 
+          $scope.data = {
+            message: $scope.message
+          };
+
           // Compose Message Modal Code
           $ionicModal.fromTemplateUrl('js/directives/composeMessage/template/composeMessageModal.html', {
             scope: $scope,
@@ -36,9 +40,13 @@
 
           $scope.sendFromComposeMessageModal = function() {
             $scope.closeComposeMessageModal();
-            validateFunctionAndExecute($scope.onSave, [$scope.message]);
+            validateFunctionAndExecute($scope.onSave, [$scope.data.message]);
+            $scope.data.message = '';
           };
 
+          $scope.$watch('message', function() {
+            $scope.data.message = $scope.message;
+          });
 
 
 
