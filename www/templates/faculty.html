@@ -1,5 +1,18 @@
-<ion-view view-title="Faculty Contact">
+<ion-view id="faculty-section" view-title="Faculty Contact">
   <ion-content>
-    <h1>Faculty Contact</h1>
+    <ion-list class="clm-animated-accordian">
+        <div ng-repeat="group in groups">
+          <ion-item class="animated fadeInLeft" ng-class="{active: isGroupShown(group)}" ng-click="toggleGroup(group)">
+            <button class="button button-clear button-positive" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></button>
+            <button class="button button-clear button-dark">
+              {{::group.name}}
+            </button>
+          </ion-item>
+          <ion-item class="item-accordion item-icon-right" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+            {{::item}}
+            <i class="icon ion-ios-contact-outline" ng-click="openFacultyDetail()"></i>
+          </ion-item>
+        </div>
+      </ion-list>
   </ion-content>
 </ion-view>

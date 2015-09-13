@@ -61,7 +61,7 @@ classmart.enums.routeConfig={
         state:'app.faculty',
         url: '/faculty',
         templateUrl: 'templates/faculty.html',
-        controller: ''
+        controller: 'FacultyCtrl'
     },
     'app_quickref':{
         state:'app.quickref',
@@ -85,7 +85,7 @@ classmart.enums.routeConfig={
         state:'app.home.forum',
         url: '/forum',
         templateUrl: 'templates/forum.html',
-        controller: ''
+        controller: 'ForumCtrl'
     },
     'app_home_quiz':{
         state:'app.home.quiz',
@@ -115,7 +115,7 @@ classmart.enums.routeConfig={
         state:'app.forumpost',
         url: '/forumpost/:id',
         templateUrl: 'templates/learnersKatta/forumpost.html',
-        controller: ''
+        controller: 'ForumPostCtrl'
     }
 
 

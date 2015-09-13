@@ -111,7 +111,8 @@
         url: routeConfig.app_faculty.url,
         views: {
           'menuContent': {
-            templateUrl: routeConfig.app_faculty.templateUrl
+            templateUrl: routeConfig.app_faculty.templateUrl,
+            controller: routeConfig.app_faculty.controller
           }
         }
       })
@@ -148,7 +149,8 @@
         url: routeConfig.app_home_forum.url,
         views: {
           'homecontent-tab': {
-            templateUrl: routeConfig.app_home_forum.templateUrl
+            templateUrl: routeConfig.app_home_forum.templateUrl,
+            controller: routeConfig.app_home_forum.controller
           }
         }
       })
@@ -208,9 +210,8 @@
         url: routeConfig.app_forumpost.url,
         views: {
           'menuContent': {
-            templateUrl: routeConfig.app_forumpost.templateUrl
-            /*,
-            controller: routeConfig.app_forumpost.controller*/
+            templateUrl: routeConfig.app_forumpost.templateUrl,
+            controller: routeConfig.app_forumpost.controller
           }
         }
       });

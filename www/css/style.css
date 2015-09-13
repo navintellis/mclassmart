@@ -1,4 +1,21 @@
-/*mentor connect chat plugin*/
+/*faculty contact module css*/
+
+.clm-animated-accordian .list .item.item-accordion {
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.49s all linear;
+}
+.clm-animated-accordian .list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.clm-animated-accordian .list .item.item-accordion.ng-hide-add,
+.clm-animated-accordian .list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+
+/*mentor connect chat plugin style*/
 
 #mentor-section .scroll {
   padding: 10px 0 50px !important;
