@@ -2,7 +2,7 @@
   'use strict';
   angular.module(classmart.constants.moduleName)
     .factory('ForumService', ['$timeout',
-//Note: Code is incomplete... Work in Progress
+//Note: Code is incomplete... Work in Progress ...
       function($timeout) {
         var data = {
           studyContent: {
